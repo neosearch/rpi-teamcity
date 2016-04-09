@@ -2,18 +2,37 @@ Based on the awesome work by [PixelStik](https://github.com/pixelistik/rpi-teamc
 this is a clean Python implementation with some minor tweaks.
 
 It uses Hypriot OS (a Raspbian variant) for a working Docker environment on your
-Raspberry Pi:
+Raspberry Pi.
+
+Download the latest installation from here:
 
 http://blog.hypriot.com/downloads/
 
-Install docker-compose separately:
+Copy the image to your SD card and boot.
 
-    sudo apt-get install python-pip
-    sudo pip install docker-compose
+Default logins:
+
+    Username: pi
+    Password: raspbery
+
+or for root:
+
+    Username: root
+    Password: hypriot
+
+
+Update the packages in the install after booting initially with:
+
+    $ sudo apt-get update && sudo apt-get upgrade
+
+Then install docker-compose separately:
+
+    $ sudo apt-get install python-pip
+    $ sudo pip install docker-compose
 
 Now everything should come together:
 
-    docker-compose up
+    $ docker-compose up
 
 will build and start three different Docker containers
 
