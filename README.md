@@ -1,5 +1,5 @@
 Based on the awesome work by [PixelStik](https://github.com/pixelistik/rpi-teamcity) 
-this is a clean Python implementation with some minor tweaks.
+this is a clean Python implementation with some minor tweaks and use of Alpine-ARM for the JDK.
 
 It uses Hypriot OS (a Raspbian variant) for a working Docker environment on your
 Raspberry Pi.

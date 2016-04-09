@@ -7,6 +7,8 @@ oraclejdk-8:
 teamcity:
   build: teamcity
   restart: always
+  links: 
+  - oraclejdk-8
   ports:
   - "8111:8111"
   volumes:
