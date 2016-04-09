@@ -3,7 +3,8 @@ MAINTAINER pixelistik <code@pixelistik.de>
 
 # https://gist.github.com/jpetazzo/6127116
 RUN echo "force-unsafe-io" > /etc/dpkg/dpkg.cfg.d/02apt-speedup && \
-    echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache
+    echo "Acquire::http {No-Cache=True;};" > /etc/apt/apt.conf.d/no-cache && \
+    echo 'Acquire::Languages "none;"' > /etc/apt/apt.conf.d/no-lang
 
 RUN apt-get update && \
     apt-get install -y -q wget ca-certificates && \

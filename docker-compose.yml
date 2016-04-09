@@ -12,16 +12,8 @@ teamcity:
   volumes:
   - ./teamcity/storage:/root/BuildServer
 
-teamcityagent:
-  build: teamcity-agent
+teamcityagent-python:
+  build: teamcity-agent-python
   restart: always
   links:
   - teamcity
-  - mysql
-
-mysql:
-  image: armbuild/orchardup-mysql
-  restart: always
-  environment:
-    MYSQL_DATABASE: aufhaxedev_testing
-    MYSQL_ROOT_PASSWORD: root
